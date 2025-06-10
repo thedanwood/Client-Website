@@ -1,0 +1,69 @@
+﻿@page "/concrete"
+@using System.Configuration
+
+@{
+    ViewBag.Title = "Concrete";
+    ViewBag.NavButtonNames = "concrete-nav-btn";
+}
+@section head{
+    <meta name='description' content='' />
+    <meta name='keywords' content='' />
+}
+<div class="main-img">
+     <partial name='partials/_image' model='new RJHWebsite.Models.ImageModel(){ ImageClassName = "main-img",ImageName="concrete-works", ImageDescription = "Self compacting concrete and domestic concrete at rorys site"}'/>
+    <div class="v-center-outer background-gradient">
+        <div class="v-center-middle ml-img-overlay">
+            <div class="v-center-inner">
+                <h1 class="img-overlay-title">Concrete</h1>
+                <p class="img-overlay-text">
+                    We offer wide range of concrete supplied for any type of project, <a href="@ConfigurationManager.AppSettings["AggregateSupply"]">view our products</a><br /> or contact our experienced team on <a href="tel:01953718306">01953 718306</a>.
+                </p>
+                <a href="@ConfigurationManager.AppSettings["Contact"]?subject=concrete" class="btn btn-blue img-overlay-btn"><i class="fas fa-envelope pr-2"></i>Concrete Enquiry</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="page-with-sidebar-container">
+    <div class="page-with-sidebar-main">
+        <div class="left-right-padding">
+            <nav aria-label="breadcrumb" class="mt-4">
+                <ol class="breadcrumb pl-0">
+                    <li class="breadcrumb-item"><a href="@ConfigurationManager.AppSettings["Home"]">Home</a></li>
+                    <li class="breadcrumb-item active"><a href="@ConfigurationManager.AppSettings["Concrete"]">Concrete</a></li>
+                </ol>
+                <hr class="mb-0" />
+            </nav>
+            <div class="text-justify top-bottom-padding">
+                <h2 class="body-title ">Concrete</h2>
+                <p>
+                    At Rory J Holbrook Ltd, we provide a wide <a href="@ConfigurationManager.AppSettings["AggregateSupply"]">array of concrete solutions</a>, ranging from flow screed to self-compacting concrete,
+                    designed to meet both the complex needs of large-scale commercial and small domestic household projects.
+                    <br/><br/>Our concrete production adheres to BSI standards, supported by a diverse selection of mixer sizes and concrete blocks. 
+                    Our team, comprised of skilled mixer drivers and dedicated support staff, leverages cutting-edge technology and deep industry 
+                    insight to offer unmatched service and value.
+                    <br/><br/>We specialize in creating bespoke concrete mixes that are tailored to the precise needs of your project, ensuring 
+                    an effective application process with minimal to no waste. This approach not only adheres to strict project schedules but also 
+                    prioritizes environmental sustainability.
+                </p>
+                <partial name='partials/_image' model='new RJHWebsite.Models.ImageModel(){ ImageClassName = "img-in-text w-lg-75 w-100",ImageName="concrete-mixing-at-recycling", ImageDescription = "Low loader transporting small cargo for a customer",IncludeOtherSizes = false}'/>
+            </div>
+        </div>
+    </div>
+    <div class="sidebar bg-light-light-grey">
+        @await Component.InvokeAsync("OtherPagesSnippet", new RJHWebsite.Models.OtherPagesSnippetModel
+        {
+            SnippetTypeEnum = (int)Enums.SnippetTypes.Sidebar,
+            CurrentPage = "",
+            ParentPage = "construction",
+            CssStyleEnum = (int)RJHWebsite.Enums.CssStyles.LightGrey,
+            Title = "See Our Construction Services"
+        })
+    </div>
+</div>
+
+@section scripts {
+
+    <script>
+        $('#road-and-rail-haulage-nav-btn').css('color', 'black').css('font-weight', 'bold');
+    </script>
+}

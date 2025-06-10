@@ -1,0 +1,66 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Pages\Redirects\**" />
+    <Compile Remove="Pages\Shared\Components\ConstructionServicesSnippet\**" />
+    <Compile Remove="wwwroot\images\**" />
+    <Compile Remove="wwwroot\NewFolder\**" />
+    <Compile Remove="wwwroot\oldimg\**" />
+    <Content Remove="Pages\Redirects\**" />
+    <Content Remove="Pages\Shared\Components\ConstructionServicesSnippet\**" />
+    <Content Remove="wwwroot\images\**" />
+    <Content Remove="wwwroot\NewFolder\**" />
+    <Content Remove="wwwroot\oldimg\**" />
+    <EmbeddedResource Remove="Pages\Redirects\**" />
+    <EmbeddedResource Remove="Pages\Shared\Components\ConstructionServicesSnippet\**" />
+    <EmbeddedResource Remove="wwwroot\images\**" />
+    <EmbeddedResource Remove="wwwroot\NewFolder\**" />
+    <EmbeddedResource Remove="wwwroot\oldimg\**" />
+    <None Remove="Pages\Redirects\**" />
+    <None Remove="Pages\Shared\Components\ConstructionServicesSnippet\**" />
+    <None Remove="wwwroot\images\**" />
+    <None Remove="wwwroot\NewFolder\**" />
+    <None Remove="wwwroot\oldimg\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Pages\Construction\LandingPages\Aggregates\DecorativeAggregatesNorfolk.cshtml.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="Pages\Construction\LandingPages\Aggregates\DecorativeAggregatesNorfolk.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <_WebToolingArtifacts Remove="Properties\PublishProfiles\Live.pubxml" />
+    <_WebToolingArtifacts Remove="Properties\PublishProfiles\Test.pubxml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Pages\Construction\LandingPages\Aggregates\AggregatesIpswich.cshtml" />
+    <None Include="Pages\Construction\LandingPages\Aggregates\AggregatesNorfolk.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="BuildBundlerMinifier" Version="3.2.449" />
+    <PackageReference Include="BundlerMinifier.Core" Version="3.2.449" />
+    <PackageReference Include="BundlerMinifier.TagHelpers" Version="3.2.449" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="SendGrid" Version="9.25.3" />
+    <PackageReference Include="System.Configuration.ConfigurationManager" Version="6.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Update="Pages\News\HoptonPrimary.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ProjectExtensions><VisualStudio><UserProperties aggregates-v1_10_1json__JsonSchema="https://appsemble.app/api.json" /></VisualStudio></ProjectExtensions>
+
+</Project>

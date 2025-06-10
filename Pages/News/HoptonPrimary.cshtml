@@ -1,0 +1,10 @@
+﻿@page "/news/hopton-primary"
+@{
+    ViewBag.Title = "Hopton Primary";
+    ViewBag.NavButtonNames = "news-nav-btn";
+}
+}
+@section head{
+    <meta name="robots" content="noindex">
+}
+@await Component.InvokeAsync("NewsPage", new { newsArticlePageName = "hopton-primary"})

@@ -1,0 +1,31 @@
+[
+  {
+    "outputFileName": "wwwroot/css/main.min.css",
+    "inputFiles": [
+      "wwwroot/lib/bootstrap/dist/css/bootstrap.min.css",
+      "wwwroot/css/website.css",
+      "wwwroot/css/navigation-menu.css",
+      "wwwroot/css/home.css",
+      "wwwroot/css/about.css",
+      "wwwroot/css/construction.css",
+      "wwwroot/css/haulage.css",
+      "wwwroot/css/variation-styles.css",
+      "wwwroot/css/snippets.css",
+      "wwwroot/css/slick-slider.css",
+      "wwwroot/css/slick-theme.css"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/js/main.min.js",
+    "inputFiles": [
+      "wwwroot/lib/jquery/dist/jquery.min.js",
+      "wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js",
+      "wwwroot/js/lazy-loading.min.js",
+      "wwwroot/js/slick-slider.js",
+      "wwwroot/js/slick-slider-additions.js",
+      "wwwroot/js/js-cookies.js",
+      "wwwroot/js/website.js",
+      "wwwroot/js/vimeo.js"
+    ]
+  }
+]
